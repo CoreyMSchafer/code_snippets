@@ -5,3 +5,8 @@ __pycache__/
 # Video Scripts
 s.txt
 script.txt
+
+# IDE files
+.idea/
+# if a symlink
+.idea
