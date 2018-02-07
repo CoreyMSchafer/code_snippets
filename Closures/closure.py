@@ -28,3 +28,5 @@ add_logger(4, 5)
 
 sub_logger(10, 5)
 sub_logger(20, 10)
+
+print("hello - test")
