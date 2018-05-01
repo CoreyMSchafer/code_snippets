@@ -94,3 +94,12 @@ print(f'is {num1} greater or equal to {num2}?', num1 >= num2)
 
 # less or equal to
 print(f'is {num1} less or equal to {num2}?', num1 <= num2)
+#---------------------------------------------------------------------------------------------#
+# casting from srting to integer                                                              #
+#---------------------------------------------------------------------------------------------#
+print(f'num5 value is: {num5} and num6 value is: {num2}', 'num5 + num6 = ', num5 + num6)
+
+# let's cast them
+num_5 = int(num5)
+num_6 = int(num6)
+print(f'num5 value is: {num_5} and num6 value is: {num_6}', 'num5 + num6 = ', num_5 + num_6)
