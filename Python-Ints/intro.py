@@ -44,3 +44,31 @@ print(f'{num1} ** {num2} =', expo)
 # modulus
 modu = num1 % num2
 print(f'{num1} % {num2} =', modu)
+
+#---------------------------------------------------------------------------------------------#
+# now let's see some method                                                                   #
+#---------------------------------------------------------------------------------------------#
+# 'type' shows the datatype
+print(type(num))
+print(type(num3))
+
+# the order of operation 
+print(f'{num} * {num1} + {num2} =', num * num1 + num2)
+print(f'{num} * ({num1} + {num2}) =', num * (num1 + num2))
+
+# incremention, let's increment num by 1
+num += 1
+num1 *= 3
+print(f'num += 1 is:', num)
+print(f'num1 += 3 is:', num1)
+
+# absolute value
+print('num4 is:', num4)
+print('Absolute value of num4 is: ', abs(num4))
+
+# rouding
+print('num3 is:', num3)
+print('round of num3 is:', round(num3))
+# set how many digit we want to round to
+print(f'{num1} / {num2}=', div)
+print(f'{num1} / {num2} round to 2 =', round(div, 2))
