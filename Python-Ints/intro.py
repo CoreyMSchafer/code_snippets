@@ -72,3 +72,25 @@ print('round of num3 is:', round(num3))
 # set how many digit we want to round to
 print(f'{num1} / {num2}=', div)
 print(f'{num1} / {num2} round to 2 =', round(div, 2))
+
+#---------------------------------------------------------------------------------------------#
+# comparaison operation: comparaison operators return boolean 'true' or 'false'               #
+#---------------------------------------------------------------------------------------------#
+# equal, a single '=' is assigment like when we set the value of num = 4
+# double equal is for comparaison
+print(f'is {num1} equal to {num2}?', num1 == num2)
+
+# not equal
+print(f'is {num1} not equal to {num2}?', num1 != num2)
+
+# greater than
+print(f'is {num1} greater than {num2}?', num1 > num2)
+
+# less than
+print(f'is {num1} less than {num2}?', num1 < num2)
+
+# greater or equal to
+print(f'is {num1} greater or equal to {num2}?', num1 >= num2)
+
+# less or equal to
+print(f'is {num1} less or equal to {num2}?', num1 <= num2)
