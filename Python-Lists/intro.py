@@ -4,6 +4,10 @@
 #---------------------------------------------------------------------------------------------#
 # basic list slicing operation                                                                #
 #---------------------------------------------------------------------------------------------#
+# initialize an empty List
+empty_list = []
+empty_list = list()
+
 # let's create a list of fruits
 fruits = ['bananas', 'mango', 'berry', 'apple', 'cherry', 'strawberry', 'melon']
 print(fruits)
@@ -110,19 +114,11 @@ print('list made out of fruit_str1 is:', new_fruits1)
 new_fruits2 = fruit_str1.split(' - ')
 print('list made out of fruit_str2 is:', new_fruits2)
 
-# Empty Lists
-empty_list = []
-empty_list = list()
-
-# Empty Sets
-empty_set = {} # This isn't right! It's a dict
-empty_set = set()
-
 #---------------------------------------------------------------------------------------------#
 # Tuples                                                                                      # 
 # tuples are similar except list are mutable and tuples are immutable (can't not be modified) #
 #---------------------------------------------------------------------------------------------#
-# Empty Tuples
+# Initialize Empty Tuples
 empty_tuple = ()
 empty_tuple = tuple()
 
@@ -134,5 +130,31 @@ print('tuple_2 is:', tuple_2)
 
 # now let's try to change item of tuple
 # tuple_1[0] = 'peach' 
-# this gives an error: does not support item assignment 
+# the above line gives an error: does not support item assignment 
+
+#---------------------------------------------------------------------------------------------#
+# Sets                                                                                        #
+# set is a list of unordered values and no duplicate                                          #
+#---------------------------------------------------------------------------------------------#
+# Initialize Empty Sets
+empty_set = {}  # This isn't right! It's a dict
+empty_set = set()
+
+set_fruits = {'bananas', 'mango', 'berry', 'apple', 'cherry', 'strawberry', 'apple', 'melon'}
+# the order of item in the set will chnage for each excution of print 
+# and will eliminate duplicate automaticly
+print('items in set of fruits are:', set_fruits)
+# sets are optimized for checking items
+print('is mango in set of fruits?', 'mango' in set_fruits)
+
+# sets also determine what values sets share or don't share with other sets
+# let's create another set
+set_fruits_2 = {'peach', 'mango', 'grape', 'apple','cherry', 'apple', 'plum'}
+print('The following items exist in both sets:', set_fruits.intersection(set_fruits_2))
+print('The following items are in set_fruits but not in set_fruits_2:', 
+        set_fruits.difference(set_fruits_2))
+
+# union will combine items of both sets
+print('Union of set_fruits and set_fruits_2 is:', set_fruits.union(set_fruits_2))
+
 
