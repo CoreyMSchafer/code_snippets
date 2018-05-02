@@ -95,6 +95,21 @@ print('is mango in fruits list?', 'mango' in fruits)
 for index, item in enumerate(fruits, start=1):
     print(index, item)
 
+#---------------------------------------------------------------------------------------------#
+# turn list into a string with join string method
+fruit_str1 = ', '.join(fruits)
+print('strings of fruits are:', fruit_str1)
+# or
+fruit_str2 = ' - '.join(fruits)
+print('strings of fruits are:', fruit_str2)
+
+# turn string values into a list with split function
+new_fruits1 = fruit_str1.split(', ')
+print('list made out of fruit_str1 is:', new_fruits1)
+# or
+new_fruits2 = fruit_str1.split(' - ')
+print('list made out of fruit_str2 is:', new_fruits2)
+
 # Empty Lists
 empty_list = []
 empty_list = list()
