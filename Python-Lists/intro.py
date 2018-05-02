@@ -26,7 +26,7 @@ print('these the first 3 items on the list:', fruits[:3])
 print('these the first 3 items on the list:', fruits[3:])
 
 #---------------------------------------------------------------------------------------------#
-# basic list slicing operation                                                                #
+# basic list operation                                                                        #
 #---------------------------------------------------------------------------------------------#
 # add an item on the list at the end of the list
 fruits.append('piche')
@@ -49,6 +49,51 @@ print('after remove, items on list are now:', fruits)
 # pop remove the last item on the list by default and return the item removed
 popeditem = fruits.pop()
 print('item removed from the list is:', popeditem)
+
+#---------------------------------------------------------------------------------------------#
+# list sorting                                                                                #
+#---------------------------------------------------------------------------------------------#
+# sorted function, return a sorted version of the list
+fruit_sorted = sorted(fruits)
+print('the sorted version of the list is:', fruit_sorted)
+
+# reverse items on the list
+fruits.reverse()
+print('after reverse, items on list are now:', fruits)
+
+# sort the list, ascending order by default
+fruits.sort()
+print('after sorting, items on list are now:', fruits)
+# to sort the list in descending order, pass reverse into sort
+fruits.sort(reverse=True)
+print('after sorting and reversing, items on list are now:', fruits)
+
+#---------------------------------------------------------------------------------------------#
+# list of integers
+number_list = [3, 5, 6, 2, 7, 4, 9, 1, 8]
+
+# the minimum value in the list
+print('The minimum value in the list is:', min(number_list))
+
+# the maximum value in the list
+print('The minimum value in the list is:', max(number_list))
+
+# the sum value of number in the list
+print('The sum value of number in the list is:', sum(number_list))
+
+# find the index of item in the list
+print('The index of 7 in number_list is:', number_list.index(7))
+print('The index of "berry" in fruits list is:', fruits.index('berry'))
+
+# check if item exist in the list
+print('is 10 in number_list?', 10 in number_list)
+print('is mango in fruits list?', 'mango' in fruits)
+
+# read item in the list with a loop
+# enumerate return the item and its index
+# a start value can be passed in enumerate
+for index, item in enumerate(fruits, start=1):
+    print(index, item)
 
 # Empty Lists
 empty_list = []
