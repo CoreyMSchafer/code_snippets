@@ -137,7 +137,10 @@ print('tuple_2 is:', tuple_2)
 # set is a list of unordered values and no duplicate                                          #
 #---------------------------------------------------------------------------------------------#
 # Initialize Empty Sets
-empty_set = {}  # This isn't right! It's a dict
+# This isn't right! It's a dict
+empty_set = {}  # this is going to create an empty dictionary
+
+# this is the right way to create an empty set
 empty_set = set()
 
 set_fruits = {'bananas', 'mango', 'berry', 'apple', 'cherry', 'strawberry', 'apple', 'melon'}
@@ -157,4 +160,4 @@ print('The following items are in set_fruits but not in set_fruits_2:',
 # union will combine items of both sets
 print('Union of set_fruits and set_fruits_2 is:', set_fruits.union(set_fruits_2))
 
-
+#---------------------------------------------------------------------------------------------#
