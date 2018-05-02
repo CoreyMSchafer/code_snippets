@@ -114,10 +114,25 @@ print('list made out of fruit_str2 is:', new_fruits2)
 empty_list = []
 empty_list = list()
 
+# Empty Sets
+empty_set = {} # This isn't right! It's a dict
+empty_set = set()
+
+#---------------------------------------------------------------------------------------------#
+# Tuples                                                                                      # 
+# tuples are similar except list are mutable and tuples are immutable (can't not be modified) #
+#---------------------------------------------------------------------------------------------#
 # Empty Tuples
 empty_tuple = ()
 empty_tuple = tuple()
 
-# Empty Sets
-empty_set = {} # This isn't right! It's a dict
-empty_set = set()
+# let's demonstarte the immutability
+tuple_1 = ('bananas', 'mango', 'berry', 'apple', 'cherry', 'strawberry', 'melon')
+tuple_2 = tuple_1
+print('tuple_1 is:', tuple_1)
+print('tuple_2 is:', tuple_2)
+
+# now let's try to change item of tuple
+# tuple_1[0] = 'peach' 
+# this gives an error: does not support item assignment 
+
