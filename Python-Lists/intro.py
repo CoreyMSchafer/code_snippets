@@ -5,7 +5,7 @@
 # basic list slicing operation                                                                #
 #---------------------------------------------------------------------------------------------#
 # let's create a list of fruits
-fruits = ['bananas', 'mango', 'blueberry', 'apple', 'sherry', 'strawberry']
+fruits = ['bananas', 'mango', 'berry', 'apple', 'cherry', 'strawberry', 'melon']
 print(fruits)
 
 #get the number of item in the list
@@ -24,6 +24,31 @@ print('these the first 3 items on the list:', fruits[0:3])
 print('these the first 3 items on the list:', fruits[:3])
 # print item from index 3 to last item on the list, not including item on index 3 
 print('these the first 3 items on the list:', fruits[3:])
+
+#---------------------------------------------------------------------------------------------#
+# basic list slicing operation                                                                #
+#---------------------------------------------------------------------------------------------#
+# add an item on the list at the end of the list
+fruits.append('piche')
+print('Items on list are:', fruits)
+
+# add item to a specific location in the list
+fruits.insert(4, 'durian')
+print('Items on list are now:', fruits)
+
+# add multiple items on the list
+fruits_2 = ['apricot','pineapple', 'plum', 'orange', 'avocado']
+# let's add fruit_2 list to fruits list
+fruits.extend(fruits_2)
+print('Items on fruits list are now:', fruits)
+
+# remove item from list
+fruits.remove('plum')
+print('after remove, items on list are now:', fruits)
+
+# pop remove the last item on the list by default and return the item removed
+popeditem = fruits.pop()
+print('item removed from the list is:', popeditem)
 
 # Empty Lists
 empty_list = []
