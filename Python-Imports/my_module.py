@@ -1,4 +1,3 @@
-
 print('Imported my_module...')
 
 test = 'Test String'
