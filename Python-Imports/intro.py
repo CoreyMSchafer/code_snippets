@@ -52,7 +52,7 @@ print("Today's date is:", today)
 print('is 2017 a leap year?:', calendar.isleap(2017))
 print('is 2020 a leap year?:', calendar.isleap(2020))
 
-# check current directory
+# get current directory
 print('the currrent directory is:', os.getcwd())
 
 #---------------------------------------------------------------------------------------------#

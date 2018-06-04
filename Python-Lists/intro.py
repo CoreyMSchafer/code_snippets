@@ -1,5 +1,6 @@
 # Python 3.6 Tutorial for Beginners
 # Working with Lists, Tuples, and Sets
+from functools import reduce
 
 #---------------------------------------------------------------------------------------------#
 # basic list slicing operation                                                                #
@@ -140,6 +141,7 @@ print('tuple_2 is:', tuple_2)
 # This isn't right! It's a dict
 empty_set = {}  # this is going to create an empty dictionary
 
+
 # this is the right way to create an empty set
 empty_set = set()
 
@@ -159,5 +161,39 @@ print('The following items are in set_fruits but not in set_fruits_2:',
 
 # union will combine items of both sets
 print('Union of set_fruits and set_fruits_2 is:', set_fruits.union(set_fruits_2))
+
+#---------------------------------------------------------------------------------------------#
+
+print([n ** 2 for n in range(10)])
+
+def foo(x): return x
+
+todolist = ["red:14.2", "yellow.band", "23", "purple:-3", "yellow:band"]
+
+# declared variables and assign the default value to 0
+# mutliple assignment 
+good = badValues = processed = badItems = elseList = 0
+
+for item in todolist:
+    try:
+        l = item.split(':')
+        value = int(l[1])
+        good += 1
+    except ValueError:
+        badValues += 1
+    except IndexError:
+        badItems += 1
+    except:
+        processed -= 1
+    else:
+        elseList += 1
+    finally:
+        processed += 1
+
+print("good: ", good)
+print("bad values: ", badValues)
+print("bad Items: ", badItems)
+print("processed: ", processed)
+
 
 #---------------------------------------------------------------------------------------------#
