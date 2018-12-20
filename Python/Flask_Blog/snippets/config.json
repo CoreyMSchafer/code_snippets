@@ -1,0 +1,6 @@
+{
+    "SECRET_KEY": "YOUR_SECRET_KEY",
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///site.db",
+    "EMAIL_USER": "YOUR_EMAIL",
+    "EMAIL_PASS": "YOUR_EMAIL_PASS"
+}
