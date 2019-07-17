@@ -1,3 +1,4 @@
+from __future__ import print_function
 import itertools
 
 # my_list = [1,2,3,4,5,6]
@@ -16,7 +17,7 @@ permutations = itertools.permutations(my_letters, 6)
 for p in permutations:
     # print p
     if ''.join(p) == word:
-        print 'Match!'
+        print('Match!')
         break
 else:
-    print 'No Match!'
+    print('No Match!')

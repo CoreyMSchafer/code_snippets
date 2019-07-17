@@ -1,9 +1,10 @@
+from __future__ import print_function
 
 i = 1
 while i <= 5:
-    print i
+    print(i)
     i += 1
     if i == 3:
         break
 else:
-    print 'Hit the While/Else Statement!'
+    print('Hit the While/Else Statement!')

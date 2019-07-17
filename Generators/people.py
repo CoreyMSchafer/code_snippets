@@ -1,11 +1,17 @@
+from __future__ import print_function
 import mem_profile
 import random
 import time
 
+try:
+    xrange
+except NameError:
+    xrange = range
+
 names = ['John', 'Corey', 'Adam', 'Steve', 'Rick', 'Thomas']
 majors = ['Math', 'Engineering', 'CompSci', 'Arts', 'Business']
 
-print 'Memory (Before): {}Mb'.format(mem_profile.memory_usage_psutil())
+print('Memory (Before): {}Mb'.format(mem_profile.memory_usage_psutil()))
 
 def people_list(num_people):
     result = []
@@ -35,5 +41,5 @@ t1 = time.clock()
 people = people_generator(1000000)
 t2 = time.clock()
 
-print 'Memory (After) : {}Mb'.format(mem_profile.memory_usage_psutil())
-print 'Took {} Seconds'.format(t2-t1)
+print('Memory (After) : {}Mb'.format(mem_profile.memory_usage_psutil()))
+print('Took {} Seconds'.format(t2-t1))

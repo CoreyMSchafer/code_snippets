@@ -1,3 +1,4 @@
+from __future__ import print_function
 def outer():
     x = 10
     def inner():
@@ -7,7 +8,7 @@ def outer():
 
 my_func = outer
 
-print my_func()
+print(my_func())
 
 # h1_tag = html_tag('h1')
 # print h1_tag

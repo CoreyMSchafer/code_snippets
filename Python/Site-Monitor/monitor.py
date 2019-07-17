@@ -43,7 +43,7 @@ try:
         # logging.info('Website is DOWN!')
         notify_user()
         reboot_server()
-    else:
+    # else:
         # logging.info('Website is UP')
 except Exception as e:
     # logging.info('Website is DOWN!')
