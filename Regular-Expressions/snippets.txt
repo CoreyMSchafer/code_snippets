@@ -9,19 +9,19 @@
 
 \b      - Word Boundary
 \B      - Not a Word Boundary
-^       - Beginning of a String
+^       - Beginning of a String. In character set, it negates the set
 $       - End of a String
 
 []      - Matches Characters in brackets
 [^ ]    - Matches Characters NOT in brackets
-|       - Either Or
+|       - Either Or (used in group)
 ( )     - Group
 
 Quantifiers:
 *       - 0 or More
 +       - 1 or More
 ?       - 0 or One
-{3}     - Exact Number
+{3}     - Exact Number e.g \d{3}.\d{3} matches 333.333,333-333
 {3,4}   - Range of Numbers (Minimum, Maximum)
 
 
