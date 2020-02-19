@@ -4,18 +4,18 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
+                <legend class="border-bottom mb-4">Giriş</legend>
                 <div class="form-group">
-                    {{ form.email.label(class="form-control-label") }}
-                    {% if form.email.errors %}
-                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    {{ form.username.label(class="form-control-label") }}
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
-                            {% for error in form.email.errors %}
+                            {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.email(class="form-control form-control-lg") }}
+                        {{ form.username(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
@@ -40,13 +40,13 @@
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
             <small class="text-muted ml-2">
-                <a href="#">Forgot Password?</a>
+                <a href="#">Şifrenizi mi unuttunuz?</a>
             </small>
         </form>
     </div>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+            Hesabınız yok mu? <a class="ml-2" href="{{ url_for('register') }}">Kaydolun</a>
         </small>
     </div>
 {% endblock content %}
