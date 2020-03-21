@@ -12,7 +12,7 @@
 
 ###### Sample crontab ######
 
-# Empty temp folder every Friday at 5pm
+# Empty temp folder every Friday at 5am
 0 5 * * 5 rm -rf /tmp/*
 
 # Backup images to Google Drive every night at midnight
