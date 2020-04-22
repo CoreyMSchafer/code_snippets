@@ -7,4 +7,4 @@ function html_tag(tag) {
 
 h1_tag = html_tag('h1')
 
-console.log(h1_tag('This is a Headline!'))
+console.log(h1_tag('This is a Headline 1!'))
