@@ -1,3 +1,4 @@
+# import os # this import needs to be uncommented if using the os.path.join approach for defining Database Path
 from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
