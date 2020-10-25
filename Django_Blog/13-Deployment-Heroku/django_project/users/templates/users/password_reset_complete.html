@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="alert alert-info">
+        Your password has been set.
+    </div>
+    <a href="{% url 'login' %}">Sign In Here</a>
+{% endblock content %}
