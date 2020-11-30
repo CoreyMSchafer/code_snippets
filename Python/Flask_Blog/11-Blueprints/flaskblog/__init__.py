@@ -17,7 +17,8 @@ mail = Mail()
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
-
+    app.config['SECRET_KEY'] = #######
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
     db.init_app(app)
     bcrypt.init_app(app)
     login_manager.init_app(app)
