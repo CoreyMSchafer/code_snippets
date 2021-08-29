@@ -15,6 +15,7 @@ class TestEmployee(unittest.TestCase):
 
     def setUp(self):
         print('setUp')
+        print(self.id().split('.')[-1])
         self.emp_1 = Employee('Corey', 'Schafer', 50000)
         self.emp_2 = Employee('Sue', 'Smith', 60000)
 
@@ -22,7 +23,6 @@ class TestEmployee(unittest.TestCase):
         print('tearDown\n')
 
     def test_email(self):
-        print('test_email')
         self.assertEqual(self.emp_1.email, 'Corey.Schafer@email.com')
         self.assertEqual(self.emp_2.email, 'Sue.Smith@email.com')
 
@@ -33,7 +33,6 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.email, 'Jane.Smith@email.com')
 
     def test_fullname(self):
-        print('test_fullname')
         self.assertEqual(self.emp_1.fullname, 'Corey Schafer')
         self.assertEqual(self.emp_2.fullname, 'Sue Smith')
 
@@ -44,7 +43,6 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.fullname, 'Jane Smith')
 
     def test_apply_raise(self):
-        print('test_apply_raise')
         self.emp_1.apply_raise()
         self.emp_2.apply_raise()
 
