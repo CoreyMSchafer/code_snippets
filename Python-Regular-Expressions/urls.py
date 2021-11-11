@@ -13,7 +13,7 @@ subbed_urls = pattern.sub(r'\2\3', urls)
 
 print(subbed_urls)
 
-# matches = pattern.finditer(urls)
+matches = pattern.finditer(urls)
 
-# for match in matches:
-#     print(match.group(3))
+for match in matches:
+  print(match.group(3))
