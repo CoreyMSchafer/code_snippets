@@ -1,4 +1,5 @@
 import mem_profile
+import memory_profiler
 import random
 import time
 
@@ -7,6 +8,7 @@ majors = ['Math', 'Engineering', 'CompSci', 'Arts', 'Business']
 
 print 'Memory (Before): {}Mb'.format(mem_profile.memory_usage_psutil())
 
+@memory_profiler.profile(precision=2)
 def people_list(num_people):
     result = []
     for i in xrange(num_people):
@@ -18,6 +20,7 @@ def people_list(num_people):
         result.append(person)
     return result
 
+@memory_profiler.profile(precision=2)
 def people_generator(num_people):
     for i in xrange(num_people):
         person = {
