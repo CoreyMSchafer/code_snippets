@@ -1,9 +1,25 @@
 # code_snippets
 
-## [Atom Python](./Atom-Python)
-## [Automation](./Automation)
-## [Beautiful soup](./BeautifulSoup)
-## [Pandas Tutorials](./Python/Pandas)
+### [Atom Python](./Atom-Python)
+### [Automation](./Automation)
+### [Beautiful soup](./BeautifulSoup)
+### [Closures](./Closure)
+### [Combination permutations](./Combinations-Permutations)
+### [Cron tasks](./Cron-Tasks)
+### [Datetime](./Datetime)
+### [Django Blog](./Django_Blog)
+### [EAFP](./EAFP)
+### [Exceptions](./Exceptions)
+### [Ex-Machina](./Ex-Machina)
+### [FC Functions](./FC_Functions)
+### [For - Else](./For_Else)
+### [Generators](./Generators)
+### [Methods](./Idempotence)
+### [List Comprehensions]()
+
+
+
+### [Pandas Tutorials](./Python/Pandas)
 1. [Installation](./Python/Pandas/01-Installation)
 2. [Dataframes](./Python/Pandas/02-DataFrames)
 3. [Indexing](./Python/Pandas/03-Indexes)
