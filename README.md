@@ -1,5 +1,4 @@
 # code_snippets
-# code_snippets
 
 ### [Atom Python](./Atom-Python)
 ### [Automation](./Automation)
