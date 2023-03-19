@@ -1,5 +1,7 @@
 
-print 'Address of a is: {}'.format(id(a))
+a = 5
+
+print('Address of a is: {}'.format(id(a)))
 
 # a[0] = ''
 # print a
