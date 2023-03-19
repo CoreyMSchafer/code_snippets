@@ -1,11 +1,15 @@
+import os
 from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
 
+project_dir = os.path.dirname(os.path.abspath(__file__))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "site.db"))
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
 
 
@@ -31,19 +35,18 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
 
-
 posts = [
     {
-        'author': 'Corey Schafer',
+        'author': 'Rupesh Chandra Mohanty',
         'title': 'Blog Post 1',
         'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'date_posted': 'April 16, 2020'
     },
     {
-        'author': 'Jane Doe',
+        'author': 'Trideep Barik',
         'title': 'Blog Post 2',
         'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'date_posted': 'April 17, 2020'
     }
 ]
 
@@ -58,27 +61,25 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-
-@app.route("/register", methods=['GET', 'POST'])
+@app.route("/register",methods=['GET','POST'])
 def register():
-    form = RegistrationForm()
+    form=RegistrationForm();
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
+        flash(f'Account Created for {form.username.data}!','success')
         return redirect(url_for('home'))
-    return render_template('register.html', title='Register', form=form)
+    return render_template('register.html',title='Register',form=form)
 
-
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/login",methods=['GET','POST'])
 def login():
-    form = LoginForm()
+    form=LoginForm();
     if form.validate_on_submit():
-        if form.email.data == 'admin@blog.com' and form.password.data == 'password':
-            flash('You have been logged in!', 'success')
+        if form.email.data=='admin@blog.com' and form.password.data=='password':
+            flash('You have been logged in!','success')
             return redirect(url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check username and password', 'danger')
-    return render_template('login.html', title='Login', form=form)
+            flash('Login unsuccessful. Please check your username and password','danger')
 
+    return render_template('login.html',title='Login',form=form)    
 
 if __name__ == '__main__':
     app.run(debug=True)
