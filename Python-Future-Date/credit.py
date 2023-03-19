@@ -2,7 +2,7 @@ import datetime
 import calendar
 
 balance = 10000
-interest_rate = 13 * .01
+interest_rate = 13 * .001
 monthly_payment = 1000
 
 today = datetime.date.today()
