@@ -60,3 +60,8 @@ class PostForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
     submit = SubmitField('Post')
+
+    def validate_title(self, title):
+        post = Post.query.filter_by(title=title.data).first()
+        if post:
+            raise ValidationError('This title already exists')
