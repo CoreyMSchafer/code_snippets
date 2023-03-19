@@ -1,3 +1,4 @@
+# import os # this import needs to be uncommented if using the os.path.join approach for defining Database Path
 from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -6,6 +7,9 @@ from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+# Alternate path for SQLALCHEMY_DATABASE_URI( it works for Windows)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.path.join(os.path.dirname(__file__), 'site.db')
 db = SQLAlchemy(app)
 
 
