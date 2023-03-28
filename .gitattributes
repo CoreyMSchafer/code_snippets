@@ -1,0 +1,15 @@
+* text=auto
+
+*.py text diff=python
+*.html text
+.project text
+
+# M$ files
+*.bat text eol=crlf
+
+# UNIX files
+**/generate_second_post text eol=lf
+
+# git files - have them with LF, as I edit them via the shell (echo etc)
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
