@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-source = requests.get('http://coreyms.com').text
+source = requests.get('https://www.bbc.com').text
 
 soup = BeautifulSoup(source, 'lxml')
 
@@ -24,7 +24,7 @@ for article in soup.find_all('article'):
         vid_id = vid_src.split('/')[4]
         vid_id = vid_id.split('?')[0]
 
-        yt_link = f'https://youtube.com/watch?v={vid_id}'
+        yt_link = f'https://bbc.com/watch?v={vid_id}'
     except Exception as e:
         yt_link = None
 
