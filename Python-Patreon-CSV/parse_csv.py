@@ -11,7 +11,9 @@ with open('patrons.csv', 'r') as data_file:
 
     for line in csv_data:
         if line['FirstName'] == 'No Reward':
-            break
+            # instead of break, please use continue to scrap complete list of names from CSV file.
+            # break
+            continue
         names.append(f"{line['FirstName']} {line['LastName']}")
 
 html_output += f'<p>There are currently {len(names)} public contributors. Thank You!</p>'
