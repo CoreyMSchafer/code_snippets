@@ -1,24 +1,32 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
+
 {% block content %}
+
     <div class="content-section">
-      <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+
+        <div class="media row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <img class="rounded-circle account-img " src="{{ user.profile.image.url }}">
+            </div>
+            <div class="media-body col-lg-3 col-md-6 col-sm-6">
+                <h2 class="account-heading mt-4">{{user.username}}</h2>
+                <p class="text-secondary mt-2">{{user.email}}</p>
+            </div>
         </div>
-      </div>
-      <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-          <fieldset class="form-group">
-              <legend class="border-bottom mb-4">Profile Info</legend>
-              {{ u_form|crispy }}
-              {{ p_form|crispy }}
-          </fieldset>
-          <div class="form-group">
-              <button class="btn btn-outline-info" type="submit">Update</button>
-          </div>
-      </form>
+
+        <!-- FORM HERE -->
+        <form method="POST", enctype="multipart/form-data">     <!-- remember enctype -->
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 mt-2"> Profile Info </legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit"> Update </button>
+            </div>
+        </form>
     </div>
+
 {% endblock content %}
