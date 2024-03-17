@@ -5,16 +5,18 @@ class Employee:
     num_of_emps = 0
     raise_amt = 1.04
 
-    def __init__(self, first, last, pay):
+    class Employee:
+    def __init__(self, first, last, annual_salary):
         self.first = first
         self.last = last
-        self.pay = pay
-
-        Employee.num_of_emps += 1
+        self.annual_salary = annual_salary
 
     @property
     def email(self):
-        return '{}.{}@email.com'.format(self.first, self.last)
+        return '{}.{}@HyperionDevBootCamp.com'.format(self.first, self.last).lower()
+
+    def employee_details(self):
+        return '{} {} £{}'.format(self.first, self.last, self.annual_salary)
 
     @property
     def fullname(self):
