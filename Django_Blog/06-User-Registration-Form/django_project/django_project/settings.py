@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    # since version 2.0 of Django Crispy Forms, template packs are now provided as separate packages.
+    # This means that for Bootstrap 4 support, you will need to install a separate package named crispy-bootstrap4​​.
+    # pip install crispy-bootstrap4
+    'crispy_bootstrap4'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
