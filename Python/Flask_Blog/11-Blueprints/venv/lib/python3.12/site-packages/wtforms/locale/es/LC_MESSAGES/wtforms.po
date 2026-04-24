@@ -1,0 +1,187 @@
+# Spanish translations for WTForms.
+# Copyright (C) 2020 WTForms Team
+# This file is distributed under the same license as the WTForms project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WTForms 1.0\n"
+"Report-Msgid-Bugs-To: eloi.rivard@nubla.fr\n"
+"POT-Creation-Date: 2024-01-11 08:20+0100\n"
+"PO-Revision-Date: 2024-01-15 09:06+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/wtforms/wtforms/"
+"es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: src/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Nombre de campo inválido '%s'."
+
+#: src/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "El campo debe coincidir con %(other_name)s."
+
+#: src/wtforms/validators.py:145
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "El campo debe tener al menos %(min)d caracter."
+msgstr[1] "El campo debe tener al menos %(min)d caracteres."
+
+#: src/wtforms/validators.py:151
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "El campo no puede tener más de %(max)d caracter."
+msgstr[1] "El campo no puede tener más de %(max)d caracteres."
+
+#: src/wtforms/validators.py:157
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] "El campo debe ser exactamente %(max)d caracter."
+msgstr[1] "El campo debe ser exactamente %(max)d caracteres."
+
+#: src/wtforms/validators.py:163
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr "El campo debe tener entre %(min)d y %(max)d caracteres."
+
+#: src/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "El número debe ser mayor que %(min)s."
+
+#: src/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "El número debe ser menor que %(max)s."
+
+#: src/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "El número debe estar entre %(min)s y %(max)s."
+
+#: src/wtforms/validators.py:293 src/wtforms/validators.py:323
+msgid "This field is required."
+msgstr "Este campo es obligatorio."
+
+#: src/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "Valor inválido."
+
+#: src/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "Email inválido."
+
+#: src/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr "Dirección IP inválida."
+
+#: src/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr "Dirección MAC inválida."
+
+#: src/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr "URL inválida."
+
+#: src/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr "UUID inválido."
+
+#: src/wtforms/validators.py:594
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Valor inválido, debe ser uno de: %(values)s."
+
+#: src/wtforms/validators.py:629
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Valor inválido, no puede ser ninguno de: %(values)s."
+
+#: src/wtforms/validators.py:698
+msgid "This field cannot be edited."
+msgstr "Este campo no se puede editar."
+
+#: src/wtforms/validators.py:714
+msgid "This field is disabled and cannot have a value."
+msgstr "Este campo está desactivado y no puede tener un valor."
+
+#: src/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "El token CSRF es incorrecto."
+
+#: src/wtforms/csrf/session.py:63
+msgid "CSRF token missing."
+msgstr "El token CSRF falta."
+
+#: src/wtforms/csrf/session.py:71
+msgid "CSRF failed."
+msgstr "Fallo CSRF."
+
+#: src/wtforms/csrf/session.py:76
+msgid "CSRF token expired."
+msgstr "El token CSRF ha expirado."
+
+#: src/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr "Elección inválida: no se puede ajustar."
+
+#: src/wtforms/fields/choices.py:149 src/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr "La elección no puede ser None."
+
+#: src/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "Opción inválida."
+
+#: src/wtforms/fields/choices.py:193
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr ""
+"Opción(es) inválida(s): una o más entradas de datos no pueden ser "
+"coaccionadas."
+
+#: src/wtforms/fields/choices.py:214
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] "%(value)s' no es una opción válida para este campo."
+msgstr[1] "%(value)s' no son opciones válidas para este campo."
+
+#: src/wtforms/fields/datetime.py:51
+msgid "Not a valid datetime value."
+msgstr "No es un valor para la fecha y la hora válido."
+
+#: src/wtforms/fields/datetime.py:77
+msgid "Not a valid date value."
+msgstr "No es una fecha válida."
+
+#: src/wtforms/fields/datetime.py:103
+msgid "Not a valid time value."
+msgstr "No es un tiempo válido."
+
+#: src/wtforms/fields/datetime.py:148
+msgid "Not a valid week value."
+msgstr "No es un valor semanal válido."
+
+#: src/wtforms/fields/numeric.py:82 src/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr "No es un valor entero válido."
+
+#: src/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr "No es un numero decimal válido."
+
+#: src/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr "No es un número de punto flotante válido."

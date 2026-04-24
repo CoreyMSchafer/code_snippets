@@ -1,0 +1,139 @@
+body {
+	background-color: #306aa0;
+	background-image: radial-gradient(circle at top left, #fff 0%, #8ce1d6 15em, #306aa0 100em, #386095 100%);
+}
+
+main, footer {
+	background-color: #fff;
+}
+
+header {
+	background-color: #00549e;
+	color: #fff;
+}
+
+a:link {
+	color: #004380;
+}
+
+a:visited {
+	color: #770d67;
+}
+
+a:focus {
+	background-color: #ffd54d;
+}
+
+a:hover {
+	background-color: #ffd54d;
+}
+
+a:active {
+	background-color: #ffd54d;
+	color: #003261;
+	outline-color: #f4ba00;
+}
+
+header a:link {
+	color: #f2f7fd;
+}
+
+header a:visited {
+	color: #f2b5e9;
+}
+
+header a:focus {
+	background-color: #ffd54d;
+	color: #004380;
+}
+
+header a:hover {
+	background-color: #ffd54d;
+	color: #004380;
+}
+
+header a:active {
+	background-color: #ffd54d;
+	color: #003261;
+	outline-color: #fff6db;
+}
+
+summary:focus {
+	background-color: #ffd54d;
+}
+
+summary:hover {
+	background-color: #ffd54d;
+}
+
+summary:active {
+	background-color: #ffd54d;
+	color: #003261;
+	outline-color: #f4ba00;
+}
+
+h2, h3, h4, h5, h6 {
+	color: #00549e;
+}
+
+.risk-level, .confidence-level {
+	color: #00549e;
+}
+
+.risk-confidence-counts-table th[scope="colgroup"], .risk-confidence-counts-table th[scope="rowgroup"] {
+	background-color: #00549e;
+	color: #fff;
+}
+
+.risk-confidence-counts-table th[scope="col"], .risk-confidence-counts-table th[scope="row"] {
+	color: #00549e;
+}
+
+.risk-confidence-counts-table > tbody > tr {
+	border-top-color: #00549e;
+}
+
+.site-risk-counts-table th[scope="colgroup"], .site-risk-counts-table th[scope="rowgroup"] {
+	background-color: #00549e;
+	color: #fff;
+}
+
+.site-risk-counts-table th[scope="col"], .site-risk-counts-table th[scope="row"] {
+	color: #00549e;
+}
+
+.site-risk-counts-table > tbody > tr {
+	border-top-color: #00549e;
+}
+
+.alert-type-counts-table > tbody > tr {
+	border-bottom-color: #00549e;
+}
+
+.alert-type-counts-table th[scope="col"] {
+	background-color: #00549e;
+	color: #fff;
+}
+
+.alert-type-counts-table th[scope="col"] {
+	border-left-color: #fff;
+}
+
+.alerts-table th, .alert-types-table th {
+	background-color: #306aa0;
+	color: #fff;
+}
+
+.additional-info-percentages {
+	color: #00549e;
+}
+
+.insights-table > tbody > tr {
+	border-bottom-color: #00549e;
+}
+
+.insights-table th[scope="col"] {
+	background-color: #00549e;
+	border-left-color: #fff;
+	color: #fff;
+}

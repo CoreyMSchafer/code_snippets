@@ -1,0 +1,187 @@
+# Translations template for WTForms.
+# Copyright (C) 2024 WTForms Team
+# This file is distributed under the same license as the WTForms project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WTForms 3.0.0\n"
+"Report-Msgid-Bugs-To: eloi.rivard@nubla.fr\n"
+"POT-Creation-Date: 2024-01-11 08:20+0100\n"
+"PO-Revision-Date: 2024-03-11 07:01+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <https://hosted.weblate.org/projects/wtforms/wtforms/"
+"kk/>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5-dev\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: src/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Жарамсыз '%s' өріс атауы."
+
+#: src/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "Өріс мәні %(other_name)s өрісімен бірдей болуы тиіс."
+
+#: src/wtforms/validators.py:145
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "Өріс ұзындығы кем дегенде %(min)d таңба болуы тиіс."
+msgstr[1] "Өріс ұзындығы кем дегенде %(min)d таңба болуы тиіс."
+
+#: src/wtforms/validators.py:151
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "Өріс ұзындығы көп дегенде %(max)d таңба болуы тиіс."
+msgstr[1] "Өріс ұзындығы көп дегенде %(max)d таңба болуы тиіс."
+
+#: src/wtforms/validators.py:157
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] "Өріс ұзындығы дәл %(max)d таңба болуы тиіс."
+msgstr[1] "Өріс ұзындығы дәл %(max)d таңба болуы тиіс."
+
+#: src/wtforms/validators.py:163
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr "Өріс ұзындығы %(min)d және %(max)d таңба арасында болуы тиіс."
+
+#: src/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "Сан кем дегенде %(min)s болуы тиіс."
+
+#: src/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "Сан көп дегенде %(max)s болуы тиіс."
+
+#: src/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "Сан %(min)s және %(max)s аралығында болуы тиіс."
+
+#: src/wtforms/validators.py:293 src/wtforms/validators.py:323
+msgid "This field is required."
+msgstr "Бұл өріс міндетті түрде керек."
+
+#: src/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "Жарасыз енгізу."
+
+#: src/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "Жарамсыз эл. пошта адресі."
+
+#: src/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr "Жарамсыз IP адрес."
+
+#: src/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr "Жарамсыз Mac адрес."
+
+#: src/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr "Жарамсыз URL адресі."
+
+#: src/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr "Жарамсыз UUID."
+
+#: src/wtforms/validators.py:594
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Жарамсыз мән, келесінің біреуі болуы тиіс: %(values)s."
+
+#: src/wtforms/validators.py:629
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Жарамсыз мән, келесінің ешқайсысы болмауы тиіс: %(values)s."
+
+#: src/wtforms/validators.py:698
+msgid "This field cannot be edited."
+msgstr "Бұл өрісті өңдеу мүмкін емес."
+
+#: src/wtforms/validators.py:714
+msgid "This field is disabled and cannot have a value."
+msgstr "Бұл өріс сөндірілген және мәнге ие бола алмайды."
+
+#: src/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "Жарамсыз CSRF токені."
+
+#: src/wtforms/csrf/session.py:63
+msgid "CSRF token missing."
+msgstr "CSRF токені жоқ болып тұр."
+
+#: src/wtforms/csrf/session.py:71
+msgid "CSRF failed."
+msgstr "CSRF сәтсіз аяқталды."
+
+#: src/wtforms/csrf/session.py:76
+msgid "CSRF token expired."
+msgstr "CSRF токенінің мерзімі аяқталды."
+
+#: src/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr "Жарамсыз таңдау: Мәнін келтіру мүмкін емес."
+
+#: src/wtforms/fields/choices.py:149 src/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr "Таңдаулар мәні Ешнәрсе болмауы тиіс."
+
+#: src/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "Жарамды таңдау емес."
+
+#: src/wtforms/fields/choices.py:193
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr ""
+"Жарамсыз таңдау(лар): бір немесе бірнеше деректер енгізуін келтіру мүмкін "
+"емес."
+
+#: src/wtforms/fields/choices.py:214
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] "'%(value)s' бұл өріс үшін жарамды таңдау емес."
+msgstr[1] "'%(value)s' бұл өріс үшін жарамды таңдаулар емес."
+
+#: src/wtforms/fields/datetime.py:51
+msgid "Not a valid datetime value."
+msgstr "Жарамды күн мен уақыт мәні емес."
+
+#: src/wtforms/fields/datetime.py:77
+msgid "Not a valid date value."
+msgstr "Жарамды күн мәні емес."
+
+#: src/wtforms/fields/datetime.py:103
+msgid "Not a valid time value."
+msgstr "Жарамды уақыт мәні емес."
+
+#: src/wtforms/fields/datetime.py:148
+msgid "Not a valid week value."
+msgstr "Жарамды апта мәні емес."
+
+#: src/wtforms/fields/numeric.py:82 src/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr "Жарамды бүтін сан мәні емес."
+
+#: src/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr "Жарамды ондық мән емес."
+
+#: src/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr "Жарамды қалқымалы үтірлі сан мәні емес."

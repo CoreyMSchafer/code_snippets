@@ -1,0 +1,8 @@
+#!/home/zarmeena/SecureApp-Sprint-Flask-Blog-App/Python/Flask_Blog/11-Blueprints/venv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from bandit.cli.config_generator import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

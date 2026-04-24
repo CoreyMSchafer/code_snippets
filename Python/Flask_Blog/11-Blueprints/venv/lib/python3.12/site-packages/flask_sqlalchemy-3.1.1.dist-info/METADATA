@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: Flask-SQLAlchemy
+Version: 3.1.1
+Summary: Add SQLAlchemy support to your Flask application.
+Maintainer-email: Pallets <contact@palletsprojects.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: flask>=2.2.5
+Requires-Dist: sqlalchemy>=2.0.16
+Project-URL: Changes, https://flask-sqlalchemy.palletsprojects.com/changes/
+Project-URL: Chat, https://discord.gg/pallets
+Project-URL: Documentation, https://flask-sqlalchemy.palletsprojects.com
+Project-URL: Donate, https://palletsprojects.com/donate
+Project-URL: Issue Tracker, https://github.com/pallets-eco/flask-sqlalchemy/issues/
+Project-URL: Source Code, https://github.com/pallets-eco/flask-sqlalchemy/
+
+Flask-SQLAlchemy
+================
+
+Flask-SQLAlchemy is an extension for `Flask`_ that adds support for
+`SQLAlchemy`_ to your application. It aims to simplify using SQLAlchemy
+with Flask by providing useful defaults and extra helpers that make it
+easier to accomplish common tasks.
+
+.. _Flask: https://palletsprojects.com/p/flask/
+.. _SQLAlchemy: https://www.sqlalchemy.org
+
+
+Installing
+----------
+
+Install and update using `pip`_:
+
+.. code-block:: text
+
+  $ pip install -U Flask-SQLAlchemy
+
+.. _pip: https://pip.pypa.io/en/stable/getting-started/
+
+
+A Simple Example
+----------------
+
+.. code-block:: python
+
+    from flask import Flask
+    from flask_sqlalchemy import SQLAlchemy
+    from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+
+    app = Flask(__name__)
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
+
+    class Base(DeclarativeBase):
+      pass
+
+    db = SQLAlchemy(app, model_class=Base)
+
+    class User(db.Model):
+        id: Mapped[int] = mapped_column(db.Integer, primary_key=True)
+        username: Mapped[str] = mapped_column(db.String, unique=True, nullable=False)
+
+    with app.app_context():
+        db.create_all()
+
+        db.session.add(User(username="example"))
+        db.session.commit()
+
+        users = db.session.execute(db.select(User)).scalars()
+
+
+Contributing
+------------
+
+For guidance on setting up a development environment and how to make a
+contribution to Flask-SQLAlchemy, see the `contributing guidelines`_.
+
+.. _contributing guidelines: https://github.com/pallets-eco/flask-sqlalchemy/blob/main/CONTRIBUTING.rst
+
+
+Donate
+------
+
+The Pallets organization develops and supports Flask-SQLAlchemy and
+other popular packages. In order to grow the community of contributors
+and users, and allow the maintainers to devote more time to the
+projects, `please donate today`_.
+
+.. _please donate today: https://palletsprojects.com/donate
+
+
+Links
+-----
+
+-   Documentation: https://flask-sqlalchemy.palletsprojects.com/
+-   Changes: https://flask-sqlalchemy.palletsprojects.com/changes/
+-   PyPI Releases: https://pypi.org/project/Flask-SQLAlchemy/
+-   Source Code: https://github.com/pallets-eco/flask-sqlalchemy/
+-   Issue Tracker: https://github.com/pallets-eco/flask-sqlalchemy/issues/
+-   Website: https://palletsprojects.com/
+-   Twitter: https://twitter.com/PalletsTeam
+-   Chat: https://discord.gg/pallets
+

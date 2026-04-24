@@ -1,0 +1,212 @@
+Metadata-Version: 2.4
+Name: bandit
+Version: 1.9.4
+Summary: Security oriented static analyser for python code.
+Home-page: https://bandit.readthedocs.io/
+Author: PyCQA
+Author-email: code-quality@python.org
+License: Apache-2.0
+Project-URL: Documentation, https://bandit.readthedocs.io/
+Project-URL: Release Notes, https://github.com/PyCQA/bandit/releases
+Project-URL: Source Code, https://github.com/PyCQA/bandit
+Project-URL: Issue Tracker, https://github.com/PyCQA/bandit/issues
+Project-URL: Discord, https://discord.gg/qYxpadCgkx
+Project-URL: Sponsor, https://psfmember.org/civicrm/contribute/transact/?reset=1&id=42
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Security
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: PyYAML>=5.3.1
+Requires-Dist: stevedore>=1.20.0
+Requires-Dist: rich
+Requires-Dist: colorama>=0.3.9; platform_system == "Windows"
+Provides-Extra: yaml
+Requires-Dist: PyYAML; extra == "yaml"
+Provides-Extra: toml
+Requires-Dist: tomli>=1.1.0; python_version < "3.11" and extra == "toml"
+Provides-Extra: baseline
+Requires-Dist: GitPython>=3.1.30; extra == "baseline"
+Provides-Extra: sarif
+Requires-Dist: sarif-om>=1.0.4; extra == "sarif"
+Requires-Dist: jschema-to-python>=1.2.3; extra == "sarif"
+Provides-Extra: test
+Requires-Dist: coverage>=4.5.4; extra == "test"
+Requires-Dist: fixtures>=3.0.0; extra == "test"
+Requires-Dist: flake8>=4.0.0; extra == "test"
+Requires-Dist: stestr>=2.5.0; extra == "test"
+Requires-Dist: testscenarios>=0.5.0; extra == "test"
+Requires-Dist: testtools>=2.3.0; extra == "test"
+Requires-Dist: beautifulsoup4>=4.8.0; extra == "test"
+Requires-Dist: pylint==1.9.4; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+.. image:: https://raw.githubusercontent.com/pycqa/bandit/main/logo/logotype-sm.png
+    :alt: Bandit
+
+======
+
+.. image:: https://github.com/PyCQA/bandit/actions/workflows/pythonpackage.yml/badge.svg?branch=main
+    :target: https://github.com/PyCQA/bandit/actions?query=workflow%3A%22Build+and+Test+Bandit%22+branch%3Amain
+    :alt: Build Status
+
+.. image:: https://readthedocs.org/projects/bandit/badge/?version=latest
+    :target: https://readthedocs.org/projects/bandit/
+    :alt: Docs Status
+
+.. image:: https://img.shields.io/pypi/v/bandit.svg
+    :target: https://pypi.org/project/bandit/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/pyversions/bandit.svg
+    :target: https://pypi.org/project/bandit/
+    :alt: Python Versions
+
+.. image:: https://img.shields.io/pypi/format/bandit.svg
+    :target: https://pypi.org/project/bandit/
+    :alt: Format
+
+.. image:: https://img.shields.io/badge/license-Apache%202-blue.svg
+    :target: https://github.com/PyCQA/bandit/blob/main/LICENSE
+    :alt: License
+
+.. image:: https://img.shields.io/discord/825463413634891776.svg
+    :target: https://discord.gg/qYxpadCgkx
+    :alt: Discord
+
+A security linter from PyCQA
+
+* Free software: Apache license
+* Documentation: https://bandit.readthedocs.io/en/latest/
+* Source: https://github.com/PyCQA/bandit
+* Bugs: https://github.com/PyCQA/bandit/issues
+* Contributing: https://github.com/PyCQA/bandit/blob/main/CONTRIBUTING.md
+
+Overview
+--------
+
+Bandit is a tool designed to find common security issues in Python code. To do
+this Bandit processes each file, builds an AST from it, and runs appropriate
+plugins against the AST nodes. Once Bandit has finished scanning all the files
+it generates a report.
+
+Bandit was originally developed within the OpenStack Security Project and
+later rehomed to PyCQA.
+
+.. image:: https://raw.githubusercontent.com/pycqa/bandit/main/bandit-terminal.png
+    :alt: Bandit Example Screen Shot
+
+Show Your Style
+---------------
+
+.. image:: https://img.shields.io/badge/security-bandit-yellow.svg
+    :target: https://github.com/PyCQA/bandit
+    :alt: Security Status
+
+Use our badge in your project's README!
+
+using Markdown::
+
+    [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+
+using RST::
+
+    .. image:: https://img.shields.io/badge/security-bandit-yellow.svg
+        :target: https://github.com/PyCQA/bandit
+        :alt: Security Status
+
+References
+----------
+
+Python AST module documentation: https://docs.python.org/3/library/ast.html
+
+Green Tree Snakes - the missing Python AST docs:
+https://greentreesnakes.readthedocs.org/en/latest/
+
+Documentation of the various types of AST nodes that Bandit currently covers
+or could be extended to cover:
+https://greentreesnakes.readthedocs.org/en/latest/nodes.html
+
+Container Images
+----------------
+
+Bandit is available as a container image, built within the bandit repository
+using GitHub Actions. The image is available on ghcr.io:
+
+.. code-block:: console
+
+    docker pull ghcr.io/pycqa/bandit/bandit
+
+The image is built for the following architectures:
+
+* amd64
+* arm64
+* armv7
+* armv8
+
+To pull a specific architecture, use the following format:
+
+.. code-block:: console
+
+    docker pull --platform=<architecture> ghcr.io/pycqa/bandit/bandit:latest
+
+Every image is signed with sigstore cosign and it is possible to verify the
+source of origin using the following cosign command:
+
+.. code-block:: console
+
+    cosign verify ghcr.io/pycqa/bandit/bandit:latest \
+      --certificate-identity https://github.com/pycqa/bandit/.github/workflows/build-publish-image.yml@refs/tags/<version> \
+      --certificate-oidc-issuer https://token.actions.githubusercontent.com
+
+Where `<version>` is the release version of Bandit.
+
+Sponsors
+--------
+
+The development of Bandit is made possible by the following sponsors:
+
+.. list-table::
+   :width: 100%
+   :class: borderless
+
+   * - .. image:: https://avatars.githubusercontent.com/u/34240465?s=200&v=4
+          :target: https://opensource.mercedes-benz.com/
+          :alt: Mercedes-Benz
+          :width: 88
+
+     - .. image:: https://github.githubassets.com/assets/tidelift-8cea37dea8fc.svg
+          :target: https://tidelift.com/lifter/search/pypi/bandit
+          :alt: Tidelift
+          :width: 88
+
+     - .. image:: https://avatars.githubusercontent.com/u/110237746?s=200&v=4
+          :target: https://stacklok.com/
+          :alt: Stacklok
+          :width: 88
+
+If you also ❤️ Bandit, please consider sponsoring.
+

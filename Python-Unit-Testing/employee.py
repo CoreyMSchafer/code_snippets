@@ -24,7 +24,7 @@ class Employee:
         self.pay = int(self.pay * self.raise_amt)
 
     def monthly_schedule(self, month):
-        response = requests.get(f'http://company.com/{self.last}/{month}')
+	response = requests.get(f'http://company.com/{self.last}/{month}', timeout=5)
         if response.ok:
             return response.text
         else:

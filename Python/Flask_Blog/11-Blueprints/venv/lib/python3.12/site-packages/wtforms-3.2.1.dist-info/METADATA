@@ -1,0 +1,119 @@
+Metadata-Version: 2.3
+Name: WTForms
+Version: 3.2.1
+Summary: Form validation and rendering for Python web development.
+Project-URL: Documentation, https://wtforms.readthedocs.io
+Project-URL: Changes, https://wtforms.readthedocs.io/changes
+Project-URL: Source Code, https://github.com/pallets-eco/wtforms/
+Project-URL: Issue Tracker, https://github.com/pallets-eco/wtforms/issues
+Project-URL: Chat, https://discord.gg/pallets
+Maintainer: WTForms
+License: Copyright 2008 WTForms
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are
+        met:
+        
+        1.  Redistributions of source code must retain the above copyright
+            notice, this list of conditions and the following disclaimer.
+        
+        2.  Redistributions in binary form must reproduce the above copyright
+            notice, this list of conditions and the following disclaimer in the
+            documentation and/or other materials provided with the distribution.
+        
+        3.  Neither the name of the copyright holder nor the names of its
+            contributors may be used to endorse or promote products derived from
+            this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+        PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+        HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+        SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+        TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+        PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+        LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+        NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE.rst
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.9
+Requires-Dist: markupsafe
+Provides-Extra: email
+Requires-Dist: email-validator; extra == 'email'
+Description-Content-Type: text/x-rst
+
+WTForms
+=======
+
+WTForms is a flexible forms validation and rendering library for Python
+web development. It can work with whatever web framework and template
+engine you choose. It supports data validation, CSRF protection,
+internationalization (I18N), and more. There are various community
+libraries that provide closer integration with popular frameworks.
+
+
+Installation
+------------
+
+Install and update using pip:
+
+.. code-block:: text
+
+    pip install -U WTForms
+
+
+Third-Party Library Integrations
+--------------------------------
+
+WTForms is designed to work with any web framework and template engine.
+There are a number of community-provided libraries that make integrating
+with frameworks even better.
+
+-   `Flask-WTF`_ integrates with the Flask framework. It can
+    automatically load data from the request, uses Flask-Babel to
+    translate based on user-selected locale, provides full-application
+    CSRF, and more.
+-   `WTForms-Alchemy`_ provides rich support for generating forms from
+    SQLAlchemy models, including an expanded set of fields and
+    validators.
+-   `WTForms-SQLAlchemy`_ provides ORM-backed fields and form generation
+    from SQLAlchemy models.
+-   `WTForms-AppEngine`_ provides ORM-backed fields and form generation
+    from AppEnding db/ndb schema
+-   `WTForms-Django`_ provides ORM-backed fields and form generation
+    from Django models, as well as integration with Django's I18N
+    support.
+-   `WTForms-Bootstrap5`_ provides Bootstrap 5 favor renderer with
+    great customizability.
+-   `Starlette-WTF`_ integrates with Starlette and the FastAPI
+    framework, based on the features of Flask-WTF.
+-   `Bootstrap-Flask`_ Bootstrap-Flask is a collection of Jinja macros
+    for Bootstrap 4 & 5 and Flask using Flask-WTF.
+
+.. _Flask-WTF: https://flask-wtf.readthedocs.io/
+.. _WTForms-Alchemy: https://wtforms-alchemy.readthedocs.io/
+.. _WTForms-SQLAlchemy: https://github.com/pallets-eco/wtforms-sqlalchemy
+.. _WTForms-AppEngine: https://github.com/pallets-eco/wtforms-appengine
+.. _WTForms-Django: https://github.com/pallets-eco/wtforms-django
+.. _WTForms-Bootstrap5: https://github.com/LaunchPlatform/wtforms-bootstrap5
+.. _Starlette-WTF: https://github.com/muicss/starlette-wtf
+.. _Bootstrap-Flask: https://github.com/helloflask/bootstrap-flask
+
+
+Links
+-----
+
+-   Documentation: https://wtforms.readthedocs.io/
+-   Releases: https://pypi.org/project/WTForms/
+-   Code: https://github.com/pallets-eco/wtforms
+-   Issue tracker: https://github.com/pallets-eco/wtforms/issues
+-   Discord Chat: https://discord.gg/F65P7Z9
+-   Translation: https://hosted.weblate.org/projects/wtforms/wtforms/

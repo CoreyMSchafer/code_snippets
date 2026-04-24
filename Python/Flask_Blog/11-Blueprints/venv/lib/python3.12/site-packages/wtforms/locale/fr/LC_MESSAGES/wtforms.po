@@ -1,0 +1,188 @@
+# French translations for WTForms.
+# Copyright (C) 2020 WTForms Team
+# This file is distributed under the same license as the WTForms project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# Stéphane Raimbault <stephane.raimbault@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WTForms 1.0.3\n"
+"Report-Msgid-Bugs-To: eloi.rivard@nubla.fr\n"
+"POT-Creation-Date: 2024-01-11 08:20+0100\n"
+"PO-Revision-Date: 2024-01-11 20:06+0000\n"
+"Last-Translator: Éloi Rivard <eloi.rivard@nubla.fr>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/wtforms/wtforms/"
+"fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: src/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Nom de champ non valide « %s »."
+
+#: src/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "Le champ doit être égal à %(other_name)s."
+
+#: src/wtforms/validators.py:145
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "Le champ doit contenir au moins %(min)d caractère."
+msgstr[1] "Le champ doit contenir au moins %(min)d caractères."
+
+#: src/wtforms/validators.py:151
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "Le champ ne peut pas contenir plus de %(max)d caractère."
+msgstr[1] "Le champ ne peut pas contenir plus de %(max)d caractères."
+
+#: src/wtforms/validators.py:157
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] "Le champ doit contenir exactement %(max)d caractère."
+msgstr[1] "Le champ doit contenir exactement %(max)d caractères."
+
+#: src/wtforms/validators.py:163
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+"La longueur du champ doit être comprise entre %(min)d et %(max)d caractères."
+
+#: src/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "Le nombre doit être au minimum %(min)s."
+
+#: src/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "Le nombre doit être au maximum %(max)s."
+
+#: src/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "Le nombre doit être compris entre %(min)s et %(max)s."
+
+#: src/wtforms/validators.py:293 src/wtforms/validators.py:323
+msgid "This field is required."
+msgstr "Ce champ est requis."
+
+#: src/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "Saisie non valide."
+
+#: src/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "Adresse électronique non valide."
+
+#: src/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr "Adresse IP non valide."
+
+#: src/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr "Adresse MAC non valide."
+
+#: src/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr "URL non valide."
+
+#: src/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr "UUID non valide."
+
+#: src/wtforms/validators.py:594
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Valeur non valide, doit être parmi : %(values)s."
+
+#: src/wtforms/validators.py:629
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Valeur non valide, ne peut contenir : %(values)s."
+
+#: src/wtforms/validators.py:698
+msgid "This field cannot be edited."
+msgstr "Ce champ n’est pas éditable."
+
+#: src/wtforms/validators.py:714
+msgid "This field is disabled and cannot have a value."
+msgstr "Ce champ est désactivé et ne peut avoir de valeur."
+
+#: src/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "Jeton CSRF non valide."
+
+#: src/wtforms/csrf/session.py:63
+msgid "CSRF token missing."
+msgstr "Jeton CSRF manquant."
+
+#: src/wtforms/csrf/session.py:71
+msgid "CSRF failed."
+msgstr "CSRF a échoué."
+
+#: src/wtforms/csrf/session.py:76
+msgid "CSRF token expired."
+msgstr "Jeton CSRF expiré."
+
+#: src/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr "Choix non valide, ne peut pas être converti."
+
+#: src/wtforms/fields/choices.py:149 src/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr "Vous devez choisir au moins un élément."
+
+#: src/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "N'est pas un choix valide."
+
+#: src/wtforms/fields/choices.py:193
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr ""
+"Choix incorrect, une ou plusieurs saisies ne peuvent pas être converties."
+
+#: src/wtforms/fields/choices.py:214
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] "« %(value)s » n'est pas un choix valide pour ce champ."
+msgstr[1] "« %(value)s » n'est pas un choix valide pour ce champ."
+
+#: src/wtforms/fields/datetime.py:51
+msgid "Not a valid datetime value."
+msgstr "N'est pas une date/heure valide."
+
+#: src/wtforms/fields/datetime.py:77
+msgid "Not a valid date value."
+msgstr "N'est pas une date valide."
+
+#: src/wtforms/fields/datetime.py:103
+msgid "Not a valid time value."
+msgstr "N'est pas un horaire valide."
+
+#: src/wtforms/fields/datetime.py:148
+msgid "Not a valid week value."
+msgstr "N'est pas une semaine valide."
+
+#: src/wtforms/fields/numeric.py:82 src/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr "N'est pas un entier valide."
+
+#: src/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr "N'est pas une valeur décimale valide."
+
+#: src/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr "N'est pas un flottant valide."

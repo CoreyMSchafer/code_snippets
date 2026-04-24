@@ -1,0 +1,70 @@
+name: DevSecOps-Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop", "feature/ci-cd-pipeline" ]
+  pull_request:
+    branches: [ "main", "develop", "feature/ci-cd-pipeline" ]
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies & Setup App
+        run: |
+          pip install "SQLAlchemy<2.0" "itsdangerous<2.1" "Werkzeug<2.1" Pillow
+          pip install flask==2.0.1 flask-sqlalchemy==2.5.1 flask-bcrypt flask-login flask-mail flask-wtf email_validator bandit pytest
+          
+          export SECRET_KEY="supersecretkey123"
+          export SQLALCHEMY_DATABASE_URI="sqlite:///site.db"
+          cd Python/Flask_Blog/11-Blueprints
+          python3 -c "from flaskblog import create_app, db; app = create_app(); app.app_context().push(); db.create_all()"
+          python3 run.py & 
+          sleep 10
+
+      - name: Run SAST Scan (Bandit)
+        run: bandit -r ./Python/Flask_Blog/11-Blueprints -lll --exit-zero
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+      - name: Create ZAP workspace
+        run: |
+          mkdir -p ${{ github.workspace }}/zap/wrk
+          chmod -R 777 ${{ github.workspace }}/zap/wrk
+
+      - name: ZAP Scan Action
+        uses: zaproxy/action-baseline@v0.12.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target: 'http://localhost:5000'
+          fail_action: false 
+
+      - name: Final Critical Check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          count=$(gh api repos/${{ github.repository }}/code-scanning/alerts?state=open \
+            --jq '[.[] | select(.rule.security_severity_level == "high" or .rule.security_severity_level == "critical")] | length')
+          if [ "$count" -gt 0 ]; then
+            echo "FAILURE: $count High/Critical vulnerabilities found."
+            exit 1
+          fi

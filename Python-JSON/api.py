@@ -1,8 +1,8 @@
-import json
-from urllib.request import urlopen
+import requests  # Change the import at the top
 
-with urlopen("https://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json") as response:
-    source = response.read()
+# Replace the urlopen block with this:
+response = requests.get("https://yahoo.com", timeout=5)
+source = response.content
 
 data = json.loads(source)
 

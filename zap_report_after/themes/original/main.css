@@ -1,0 +1,417 @@
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+pre, ul {
+	margin: 0;
+}
+
+ol {
+	list-style-type: none;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1em;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: Verdana, sans-serif;
+	line-height: 1.5;
+}
+
+body {
+	margin: 1.5em 0;
+}
+
+@media screen and (min-width: 50em) {
+	body {
+		margin: 1.5em 2ch;
+		padding: 1.5em 2ch;
+	}
+}
+
+a:active, header a:active {
+	outline-style: solid;
+}
+
+header, main {
+	margin: 0 auto;
+	max-width: 90ch;
+	padding: 1.5em 4ch;
+}
+
+header {
+	border-radius: .25em .25em 0 0;
+}
+
+main {
+	border-radius: 0 0 .25em .25em;
+}
+
+summary {
+	cursor: pointer;
+}
+
+.contents {
+	margin-top: 1.5em;
+}
+
+main > section {
+	margin-bottom: 4.5em;
+}
+
+.about-this-report > section {
+	margin-bottom: 3em;
+}
+
+.summaries section {
+	margin-bottom: 3em;
+}
+
+h2 {
+	margin-bottom: .75em;
+}
+
+h3 {
+	margin-bottom: 1.5em;
+}
+
+h4 {
+	margin-bottom: 1.5em;
+}
+
+.report-parameters--container h4 {
+	margin-top: 1.5em;
+}
+
+p {
+	margin: 1.5em 0;
+}
+
+p:first-of-type {
+	margin-top: 0;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+.contents li, .alerts li, .alert-types > ol > li {
+	margin-top: 1.5em;
+}
+
+.alert-types h4 {
+	margin-bottom: 0;
+}
+
+a {
+	border-radius: .125em;
+}
+
+caption {
+	margin-bottom: 1.5em;
+	text-align: left;
+}
+
+code, .request-method-n-url {
+	overflow-wrap: anywhere;
+	white-space: break-spaces;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.report-description--container, .report-parameters--container {
+	margin-left: 2ch;
+	padding: 0 2ch;
+}
+
+.about-this-report h3, .summaries h3, .appendix h3 {
+	border-bottom: .05em solid;
+}
+
+.alerts h4 {
+	text-align: center;
+}
+
+.alerts ol {
+	padding-left: 0;
+}
+
+.alerts--site-li {
+	border: .05em solid;
+	border-radius: .25em;
+	margin-left: 2ch;
+	padding: 1.5em 3ch;
+}
+
+.contents ol {
+	list-style-position: inside;
+	list-style-type: square;
+	padding-left: 4ch;
+}
+
+.contexts-list, .sites-list {
+	list-style-type: square;
+}
+
+.risk-confidence-counts-table {
+	width: 100%;
+}
+
+.risk-confidence-counts-table tr {
+	height: 4.5em;
+}
+
+.risk-confidence-counts-table thead > tr {
+	height: 3em;
+}
+
+.risk-confidence-counts-table th[scope="row"], .risk-confidence-counts-table th[scope="rowgroup"] {
+	hyphens: auto;
+	overflow-wrap: anywhere;
+	word-break: break-all;
+}
+
+.risk-confidence-counts-table th[scope="row"] {
+	padding-right: 5%;
+}
+
+@media screen and (max-width: 50em) {
+	.risk-confidence-counts-table th[scope="row"] {
+		padding-right: 1ch;
+	}
+}
+
+.risk-confidence-counts-table th[scope="rowgroup"] {
+	padding: 0 .5ch;
+	vertical-align: middle;
+}
+
+.risk-confidence-counts-table > tbody > tr {
+	border-top: .05em solid;
+}
+
+.risk-confidence-counts-table th[scope="row"], .risk-confidence-counts-table td {
+	vertical-align: top;
+}
+
+.risk-confidence-counts-table th[scope="col"] {
+	vertical-align: bottom;
+}
+
+.risk-confidence-counts-table th[scope="col"], .risk-confidence-counts-table th[scope="row"] {
+	font-family: monospace, monospace;
+	font-weight: bold;
+}
+
+.risk-confidence-counts-table th[scope="colgroup"], .risk-confidence-counts-table th[scope="rowgroup"] {
+	font-weight: normal;
+}
+
+.risk-confidence-counts-table td, .risk-confidence-counts-table th[scope="col"], .risk-confidence-counts-table th[scope="row"] {
+	text-align: right;
+}
+
+.site-risk-counts-table {
+	width: 100%;
+}
+
+.site-risk-counts-table tr {
+	height: 4.5em;
+}
+
+.site-risk-counts-table thead > tr:first-of-type {
+	height: 3em;
+}
+
+.site-risk-counts-table th[scope="row"], .site-risk-counts-table th[scope="col"] {
+	hyphens: auto;
+	overflow-wrap: anywhere;
+	word-break: break-all;
+}
+
+.site-risk-counts-table th[scope="row"] {
+	padding-right: 1%;
+}
+
+@media screen and (max-width: 50em) {
+	.site-risk-counts-table th[scope="row"] {
+		padding-right: 1ch;
+	}
+}
+
+.site-risk-counts-table th[scope="rowgroup"] {
+	padding: 0 .5ch;
+	vertical-align: middle;
+}
+
+.site-risk-counts-table > tbody > tr {
+	border-top: .05em solid;
+}
+
+.site-risk-counts-table th[scope="row"], .site-risk-counts-table td {
+	vertical-align: top;
+}
+
+.site-risk-counts-table th[scope="col"] {
+	vertical-align: bottom;
+}
+
+.site-risk-counts-table th[scope="col"], .site-risk-counts-table th[scope="row"] {
+	font-family: monospace, monospace;
+	font-weight: bold;
+}
+
+.site-risk-counts-table th[scope="colgroup"], .site-risk-counts-table th[scope="rowgroup"] {
+	font-weight: normal;
+}
+
+.site-risk-counts-table td, .site-risk-counts-table th[scope="col"], .site-risk-counts-table th[scope="row"] {
+	text-align: right;
+}
+
+.alert-type-counts-table {
+	width: 100%;
+}
+
+.alert-type-counts-table th, .alert-type-counts-table td {
+	padding: 0 1rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.alert-type-counts-table td:nth-last-of-type(2) {
+	padding-left: 1.5rem;
+}
+
+.alert-type-counts-table > tbody > tr {
+	border-bottom: 0.05em dotted;
+}
+
+.alert-type-counts-table th[scope="col"] {
+	border-left: 1rem solid;
+}
+
+.alert-type-counts-table th[scope="col"]:first-of-type {
+	border-left: 0;
+}
+
+.alert-type-counts-table th[scope="col"]:last-of-type, .alert-type-counts-table td:last-of-type {
+	text-align: right;
+}
+
+.alert-type-counts-table th[scope="col"], .alert-type-counts-table th[scope="row"] {
+	font-weight: normal;
+}
+
+.alert-type-counts-table th[scope="row"], .alert-type-counts-table td {
+	padding-bottom: 1.5em;
+}
+
+.alert-type-counts-table thead > th:first-of-type {
+	width: 45%;
+}
+
+.alerts-table, .alert-types-table, .insights-table {
+	border-collapse: separate;
+	border-spacing: 2ch 1.5em;
+	width: 100%;
+}
+
+.alerts-table th, .alerts-table td, .alert-types-table th, .alert-types-table td, .insights-table td, .insights-table th {
+	vertical-align: top;
+}
+
+.alerts-table td, .alert-types-table td, .insights-table td {
+	overflow-wrap: anywhere;
+}
+
+.alerts-table th, .alert-types-table th, .insights-table th {
+	padding: 0 1ch;
+}
+
+.alerts-table td, .alert-types-table td {
+	padding: 0 2ch;
+}
+
+.insights-table td {
+	padding: 0 1ch;
+}
+
+.alerts-table summary {
+	margin-bottom: 1.5em;
+}
+
+.alert-tags-list {
+	list-style-position: inside;
+	list-style-type: square;
+	padding-left: 0;
+}
+
+.alert-tags-list > li {
+	margin-top: 0;
+}
+
+.request-body, .response-body {
+	margin-top: 1.5em;
+}
+
+.request-method-n-url {
+	margin-bottom: 0;
+}
+
+.alert-types-table {
+	padding-top: 0;
+}
+
+.alert-types-table th {
+	width: 20%;
+}
+
+.alert-types-table ol {
+	list-style-position: inside;
+	list-style-type: square;
+	padding-left: 0;
+}
+
+.alert-types-table li:not(:first-of-type) {
+	margin-top: 1.5em;
+}
+
+p.alert-types-intro {
+	margin-bottom: 3em;
+}
+
+.zap-logo {
+	height: 1em;
+	margin-right: .25ch;
+	width: 1em;
+}
+
+h1, h2 {
+	font-family: Georgia, serif;
+}
+
+.risk-level, .confidence-level, .included-risk-codes, .included-confidence-codes, .additional-info-percentages {
+	font-family: monospace, monospace;
+}
+
+.context, .site, .request-method-n-url {
+	font-family: monospace, monospace;
+}

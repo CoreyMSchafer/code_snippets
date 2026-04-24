@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-source = requests.get('http://coreyms.com').text
+source = requests.get('http://coreyms.com', timeout=5).text
 
 soup = BeautifulSoup(source, 'lxml')
 

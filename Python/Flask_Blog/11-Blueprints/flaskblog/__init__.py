@@ -30,4 +30,20 @@ def create_app(config_class=Config):
     app.register_blueprint(posts)
     app.register_blueprint(main)
 
+    @app.after_request
+    def add_security_headers(response):
+        # Fixes: Content Security Policy (CSP) Header Not Set
+        response.headers['Content-Security-Policy'] = (
+            "default-src 'self'; "
+            "script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net; "
+            "style-src 'self' https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com;"
+        )
+
+        # Fixes common Low/Medium risks:
+        response.headers['X-Content-Type-Options'] = 'nosniff' 
+        response.headers['X-Frame-Options'] = 'SAMEORIGIN'     
+        response.headers['X-XSS-Protection'] = '1; mode=block' 
+        
+        return response # <--- Don't forget this!
+
     return app

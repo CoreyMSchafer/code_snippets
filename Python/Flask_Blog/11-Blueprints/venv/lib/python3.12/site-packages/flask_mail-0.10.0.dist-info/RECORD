@@ -1,0 +1,9 @@
+flask_mail-0.10.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+flask_mail-0.10.0.dist-info/LICENSE.txt,sha256=NjGx7g1yxwNiJgUwLiQ9Fbx4Mtmlg13y-FTw0pk5y8M,1493
+flask_mail-0.10.0.dist-info/METADATA,sha256=NeD-q9ct7BhNLCuIpeQbrlh53eUhfhGTgv7hUbFOvAg,2070
+flask_mail-0.10.0.dist-info/RECORD,,
+flask_mail-0.10.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_mail-0.10.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+flask_mail/__init__.py,sha256=9kmcIKZe6ZnajZLUmexrX13kSuRv6pWwofztlU__ZlA,20841
+flask_mail/__pycache__/__init__.cpython-312.pyc,,
+flask_mail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0

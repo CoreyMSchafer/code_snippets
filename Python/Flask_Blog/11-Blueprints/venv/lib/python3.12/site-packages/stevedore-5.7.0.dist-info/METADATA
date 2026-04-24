@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: stevedore
+Version: 5.7.0
+Summary: Manage dynamic plugins for Python applications
+Author-email: OpenStack <openstack-discuss@lists.openstack.org>
+License: Apache-2.0
+Project-URL: Homepage, https://docs.openstack.org/stevedore
+Project-URL: Repository, https://opendev.org/openstack/stevedore
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS
+Dynamic: license-file
+
+===========================================================
+stevedore -- Manage dynamic plugins for Python applications
+===========================================================
+
+.. image:: https://governance.openstack.org/tc/badges/stevedore.svg
+
+.. image:: https://img.shields.io/pypi/v/stevedore.svg
+    :target: https://pypi.org/project/stevedore/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/stevedore.svg
+    :target: https://pypi.org/project/stevedore/
+    :alt: Downloads
+
+Python makes loading code dynamically easy, allowing you to configure
+and extend your application by discovering and loading extensions
+("*plugins*") at runtime. Many applications implement their own
+library for doing this, using ``__import__`` or ``importlib``.
+stevedore avoids creating yet another extension
+mechanism by building on top of `setuptools entry points`_. The code
+for managing entry points tends to be repetitive, though, so stevedore
+provides manager classes for implementing common patterns for using
+dynamically loaded extensions.
+
+.. _setuptools entry points: http://setuptools.readthedocs.io/en/latest/pkg_resources.html?#entry-points
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/stevedore/latest
+* Source: https://opendev.org/openstack/stevedore
+* Bugs: https://bugs.launchpad.net/python-stevedore
+

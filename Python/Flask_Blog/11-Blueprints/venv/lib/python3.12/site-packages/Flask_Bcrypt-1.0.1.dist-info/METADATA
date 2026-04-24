@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: Flask-Bcrypt
+Version: 1.0.1
+Summary: Brcrypt hashing for Flask.
+Home-page: https://github.com/maxcountryman/flask-bcrypt
+Author: Max Countryman
+Author-email: maxc@me.com
+License: BSD
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: bcrypt (>=3.1.1)
+
+[![Tests](https://img.shields.io/github/workflow/status/maxcountryman/flask-bcrypt/Tests/master?label=tests)](https://github.com/maxcountryman/flask-bcrypt/actions)
+[![Version](https://img.shields.io/pypi/v/Flask-Bcrypt.svg)](https://pypi.python.org/pypi/Flask-Bcrypt)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/Flask-Bcrypt.svg)](https://pypi.python.org/pypi/Flask-Bcrypt)
+
+# Flask-Bcrypt
+
+Flask-Bcrypt is a Flask extension that provides bcrypt hashing utilities for
+your application.
+
+Due to the recent increased prevalence of powerful hardware, such as modern
+GPUs, hashes have become increasingly easy to crack. A proactive solution to
+this is to use a hash that was designed to be "de-optimized". Bcrypt is such
+a hashing facility; unlike hashing algorithms such as MD5 and SHA1, which are
+optimized for speed, bcrypt is intentionally structured to be slow.
+
+For sensitive data that must be protected, such as passwords, bcrypt is an
+advisable choice.
+
+## Installation
+
+Install the extension with one of the following commands:
+
+    $ easy_install flask-bcrypt
+
+or alternatively if you have pip installed:
+
+    $ pip install flask-bcrypt
+
+## Usage
+
+To use the extension simply import the class wrapper and pass the Flask app
+object back to here. Do so like this:
+
+    from flask import Flask
+    from flask_bcrypt import Bcrypt
+
+    app = Flask(__name__)
+    bcrypt = Bcrypt(app)
+
+Two primary hashing methods are now exposed by way of the bcrypt object. Use
+them like so:
+
+    pw_hash = bcrypt.generate_password_hash('hunter2')
+    bcrypt.check_password_hash(pw_hash, 'hunter2') # returns True
+
+## Documentation
+
+The Sphinx-compiled documentation is available here: https://flask-bcrypt.readthedocs.io/
+
+

@@ -1,0 +1,63 @@
+[bandit.blacklists]
+calls = bandit.blacklists.calls:gen_blacklist
+imports = bandit.blacklists.imports:gen_blacklist
+
+[bandit.formatters]
+csv = bandit.formatters.csv:report
+custom = bandit.formatters.custom:report
+html = bandit.formatters.html:report
+json = bandit.formatters.json:report
+sarif = bandit.formatters.sarif:report
+screen = bandit.formatters.screen:report
+txt = bandit.formatters.text:report
+xml = bandit.formatters.xml:report
+yaml = bandit.formatters.yaml:report
+
+[bandit.plugins]
+any_other_function_with_shell_equals_true = bandit.plugins.injection_shell:any_other_function_with_shell_equals_true
+assert_used = bandit.plugins.asserts:assert_used
+django_extra_used = bandit.plugins.django_sql_injection:django_extra_used
+django_mark_safe = bandit.plugins.django_xss:django_mark_safe
+django_rawsql_used = bandit.plugins.django_sql_injection:django_rawsql_used
+exec_used = bandit.plugins.exec:exec_used
+flask_debug_true = bandit.plugins.app_debug:flask_debug_true
+hardcoded_bind_all_interfaces = bandit.plugins.general_bind_all_interfaces:hardcoded_bind_all_interfaces
+hardcoded_password_default = bandit.plugins.general_hardcoded_password:hardcoded_password_default
+hardcoded_password_funcarg = bandit.plugins.general_hardcoded_password:hardcoded_password_funcarg
+hardcoded_password_string = bandit.plugins.general_hardcoded_password:hardcoded_password_string
+hardcoded_sql_expressions = bandit.plugins.injection_sql:hardcoded_sql_expressions
+hardcoded_tmp_directory = bandit.plugins.general_hardcoded_tmp:hardcoded_tmp_directory
+hashlib_insecure_functions = bandit.plugins.hashlib_insecure_functions:hashlib
+huggingface_unsafe_download = bandit.plugins.huggingface_unsafe_download:huggingface_unsafe_download
+jinja2_autoescape_false = bandit.plugins.jinja2_templates:jinja2_autoescape_false
+linux_commands_wildcard_injection = bandit.plugins.injection_wildcard:linux_commands_wildcard_injection
+logging_config_insecure_listen = bandit.plugins.logging_config_insecure_listen:logging_config_insecure_listen
+markupsafe_markup_xss = bandit.plugins.markupsafe_markup_xss:markupsafe_markup_xss
+paramiko_calls = bandit.plugins.injection_paramiko:paramiko_calls
+pytorch_load = bandit.plugins.pytorch_load:pytorch_load
+request_with_no_cert_validation = bandit.plugins.crypto_request_no_cert_validation:request_with_no_cert_validation
+request_without_timeout = bandit.plugins.request_without_timeout:request_without_timeout
+set_bad_file_permissions = bandit.plugins.general_bad_file_permissions:set_bad_file_permissions
+snmp_insecure_version = bandit.plugins.snmp_security_check:snmp_insecure_version_check
+snmp_weak_cryptography = bandit.plugins.snmp_security_check:snmp_crypto_check
+ssh_no_host_key_verification = bandit.plugins.ssh_no_host_key_verification:ssh_no_host_key_verification
+ssl_with_bad_defaults = bandit.plugins.insecure_ssl_tls:ssl_with_bad_defaults
+ssl_with_bad_version = bandit.plugins.insecure_ssl_tls:ssl_with_bad_version
+ssl_with_no_version = bandit.plugins.insecure_ssl_tls:ssl_with_no_version
+start_process_with_a_shell = bandit.plugins.injection_shell:start_process_with_a_shell
+start_process_with_no_shell = bandit.plugins.injection_shell:start_process_with_no_shell
+start_process_with_partial_path = bandit.plugins.injection_shell:start_process_with_partial_path
+subprocess_popen_with_shell_equals_true = bandit.plugins.injection_shell:subprocess_popen_with_shell_equals_true
+subprocess_without_shell_equals_true = bandit.plugins.injection_shell:subprocess_without_shell_equals_true
+tarfile_unsafe_members = bandit.plugins.tarfile_unsafe_members:tarfile_unsafe_members
+trojansource = bandit.plugins.trojansource:trojansource
+try_except_continue = bandit.plugins.try_except_continue:try_except_continue
+try_except_pass = bandit.plugins.try_except_pass:try_except_pass
+use_of_mako_templates = bandit.plugins.mako_templates:use_of_mako_templates
+weak_cryptographic_key = bandit.plugins.weak_cryptographic_key:weak_cryptographic_key
+yaml_load = bandit.plugins.yaml_load:yaml_load
+
+[console_scripts]
+bandit = bandit.cli.main:main
+bandit-baseline = bandit.cli.baseline:main
+bandit-config-generator = bandit.cli.config_generator:main

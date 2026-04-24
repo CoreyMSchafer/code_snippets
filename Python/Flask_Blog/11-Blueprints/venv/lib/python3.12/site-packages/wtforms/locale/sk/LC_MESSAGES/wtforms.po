@@ -1,0 +1,189 @@
+# Slovak translations for WTForms.
+# Copyright (C) 2020 WTForms Team
+# This file is distributed under the same license as the WTForms project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WTForms 2.0dev\n"
+"Report-Msgid-Bugs-To: eloi.rivard@nubla.fr\n"
+"POT-Creation-Date: 2024-01-11 08:20+0100\n"
+"PO-Revision-Date: 2024-01-19 21:00+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/wtforms/wtforms/"
+"sk/>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.4-dev\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: src/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Neplatný názov poľa '%s'."
+
+#: src/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "Hodnota poľa musí byť rovnaká ako v prípade %(other_name)s."
+
+#: src/wtforms/validators.py:145
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "Pole musí obsahovať aspoň %(min)d znak."
+msgstr[1] "Pole musí obsahovať aspoň %(min)d znaky."
+msgstr[2] "Pole musí obsahovať aspoň %(min)d znakov."
+
+#: src/wtforms/validators.py:151
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "Pole nesmie byť dlhšie ako %(max)d znak."
+msgstr[1] "Pole nesmie byť dlhšie ako %(max)d znaky."
+msgstr[2] "Pole nesmie byť dlhšie ako %(max)d znakov."
+
+#: src/wtforms/validators.py:157
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] "Pole musí byť presne %(max)d znak dlhé."
+msgstr[1] "Pole musí byť presne %(max)d znaky dlhé."
+msgstr[2] "Pole musí byť presne %(max)d znakov dlhé."
+
+#: src/wtforms/validators.py:163
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr "Počet znakov v poli musí byť medzi %(min)d a %(max)d."
+
+#: src/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "Číslo musí byť aspoň %(min)s."
+
+#: src/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "Číslo musí byť najviac %(max)s."
+
+#: src/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "Číslo musí byť medzi %(min)s a %(max)s."
+
+#: src/wtforms/validators.py:293 src/wtforms/validators.py:323
+msgid "This field is required."
+msgstr "Toto pole je povinné."
+
+#: src/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "Neplatný vstup."
+
+#: src/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "Neplatná emailová adresa."
+
+#: src/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr "Neplatná IP adresa."
+
+#: src/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr "Neplatná MAC adresa."
+
+#: src/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr "Neplatné URL."
+
+#: src/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr "Neplatné UUID."
+
+#: src/wtforms/validators.py:594
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Neplatná hodnota, povolené hodnoty sú: %(values)s."
+
+#: src/wtforms/validators.py:629
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Neplatná hodnota, nesmie byť jedna z: %(values)s."
+
+#: src/wtforms/validators.py:698
+msgid "This field cannot be edited."
+msgstr "Toto pole nie je možné upravovať."
+
+#: src/wtforms/validators.py:714
+msgid "This field is disabled and cannot have a value."
+msgstr "Toto pole je zakázané a nemôže mať hodnotu."
+
+#: src/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "Neplatný CSRF token."
+
+#: src/wtforms/csrf/session.py:63
+msgid "CSRF token missing."
+msgstr "Chýba CSRF token."
+
+#: src/wtforms/csrf/session.py:71
+msgid "CSRF failed."
+msgstr "Chyba CSRF."
+
+#: src/wtforms/csrf/session.py:76
+msgid "CSRF token expired."
+msgstr "CSRF token expiroval."
+
+#: src/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr "Neplatná voľba: hodnotu sa nepodarilo previesť."
+
+#: src/wtforms/fields/choices.py:149 src/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr "Výbery nemôžu byť žiadne."
+
+#: src/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "Neplatná voľba."
+
+#: src/wtforms/fields/choices.py:193
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr "Neplatná voľba: jeden alebo viacero vstupov sa nepodarilo previesť."
+
+#: src/wtforms/fields/choices.py:214
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] "'%(value)s' nieje platnou voľbou pre toto pole."
+msgstr[1] "'%(value)s' niesú platnou voľbou pre toto pole."
+msgstr[2] "'%(value)s' nieje platnou voľbou pre toto pole."
+
+#: src/wtforms/fields/datetime.py:51
+msgid "Not a valid datetime value."
+msgstr "Neplatná hodnota pre dátum a čas."
+
+#: src/wtforms/fields/datetime.py:77
+msgid "Not a valid date value."
+msgstr "Neplatná hodnota pre dátum."
+
+#: src/wtforms/fields/datetime.py:103
+msgid "Not a valid time value."
+msgstr "Nie je platná hodnota času."
+
+#: src/wtforms/fields/datetime.py:148
+msgid "Not a valid week value."
+msgstr "Nie je platný týždeň."
+
+#: src/wtforms/fields/numeric.py:82 src/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr "Neplatná hodnota pre celé číslo."
+
+#: src/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr "Nie je platnou desatinnou hodnotou."
+
+#: src/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr "Neplatná hodnota pre desatinné číslo."

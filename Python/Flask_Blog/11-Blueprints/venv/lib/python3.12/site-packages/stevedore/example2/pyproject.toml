@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stevedore-examples2"
+description = "Demonstration package for stevedore"
+authors = [
+    {name = "Doug Hellmann", email = "doug@doughellmann.com"},
+]
+readme = {file = "README.rst", content-type = "text/x-rst"}
+license = {text = "Apache-2.0"}
+version = "0.1"
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://docs.openstack.org/stevedore"
+Repository = "https://opendev.org/openstack/stevedore"
+
+[project.entry-points."stevedore.example.formatter"]
+field = "stevedore.example2.fields:FieldList"
+
+[tool.setuptools]
+packages = [
+    "stevedore.examples2"
+]
